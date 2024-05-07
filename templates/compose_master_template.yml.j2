@@ -45,6 +45,7 @@ x-networks: &base_networks
 networks:
   traefik_net:
     name: traefik_net
+{% if service_cfg.name != "traefik" %}
     external: true
-
+{% endif %}
 {% endif %}
