@@ -5,6 +5,7 @@
         database: "{{ item.db }}"
         key: "{{ item.key }}"
       with_items: [{"db": "passwd", "key": "{{ admin.name }}"}, {"db": "group", "key": "docker"}]
+      tags: [ always ]
 
     - name: "Store User ID: {{ ansible_facts.getent_passwd[vars.admin.name].1 }}"
       set_fact:

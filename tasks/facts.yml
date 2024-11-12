@@ -12,7 +12,7 @@
       restarted: true
       state: present
       stopped: false
-      recreate: smart
+      recreate: auto
       remove_orphans: false
       remove_volumes: false
   tags: [ never, restarted ]
@@ -24,7 +24,7 @@
       state: present
       restarted: false
       stopped: true
-      recreate: smart
+      recreate: auto
       remove_orphans: false
       remove_volumes: false
   tags: [ never, stopped ]
@@ -48,7 +48,7 @@
       state: absent
       restarted: false
       stopped: false
-      recreate: smart
+      recreate: auto
       remove_orphans: true
       remove_volumes: true
   tags: [ never, absent ]
